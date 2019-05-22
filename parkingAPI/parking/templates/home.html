@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'home.css' %}?v=0.5"
+    />
+    <title>마블리의 주차주차</title>
+  </head>
+  <body>
+    <div class="bodywrapper">
+      <div class="wrapper">
+        <img src="{% static 'summer.png' %}" class="pic" />
+        <img src="{% static 'gibungood.png' %}" class="pic" />
+        <img src="{% static 'ToPusan.png' %}" class="pic" />
+        <img src="{% static 'what.png' %}" class="pic" />
+        <img src="{% static 'chabbae.png' %}" class="pic" />
+        <img src="{% static 'nunmool.png' %}" class="pic" />
+        <img src="{% static 'yeogi.png' %}" class="pic" />
+      </div>
+      <div class="ParkingInfo">
+        <table>
+          <tr class="title">
+            <td>주차장명</td>
+            <td>주차대수</td>
+            <td>주소</td>
+            <td>전화번호</td>
+          </tr>
+          {% for item in items %}
+          <tr>
+            <td>{{ item.pkName }}</td>
+            <td>{{ item.pkCount }}</td>
+            <td>{{ item.pkAddr }}</td>
+            <td>{{ item.pNum }}</td>
+          </tr>
+
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+html,
+body {
+  box-sizing: border-box;
+  padding: 0px;
+  background-color: rgb(226, 233, 246);
+}
+
+.bodywrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
+}
+
+.pic {
+  margin-bottom: 60px;
+}
+
+table {
+  text-align: center;
+}
+
+tr {
+  height: 50px;
+}
+.title {
+  font-weight: bolder;
+  font-size: 1.5em;
+}
